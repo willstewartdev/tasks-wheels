@@ -11,4 +11,14 @@ class CategoryController extends Controller
     {
         return response()->json(Category::all()->toArray());
     }
+    
+    public function store(Request $request)
+    {
+        return response()->json(['status' => true, 'message' => 'Category Created']);
+    }
+
+    public function destroy(Request $request)
+    {
+        return response()->json(['status' => true, 'message' => 'Category Deleted']);
+    }
 }
